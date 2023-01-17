@@ -1,6 +1,13 @@
 import React from 'react';
-import {Text, View, Image, ImageBackground} from 'react-native';
+import {
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
 import styles from './styles';
+import {images, icon} from '../../constants';
 
 function WelcomScreen(props) {
   return (
@@ -8,26 +15,28 @@ function WelcomScreen(props) {
       <ImageBackground
         style={styles.imageBackground}
         resizeMode="stretch"
-        source={require('../../assets/ndlogo.png')}>
+        source={images.logoND}>
         <View style={styles.logoBox}>
           <View style={styles.logoTop}>
-            <Image
-              style={styles.iconTop}
-              source={require('../../assets/flame.png')}
-            />
-            <Text>ND GAMING</Text>
+            <Image style={styles.iconTop} source={icon.iconFlame} />
+            <Text>ND CHAT</Text>
             <View style={{flex: 1}} />
-            <Image
-              style={styles.iconQuestion}
-              source={require('../../assets/question.png')}
-            />
+            <Image style={styles.iconQuestion} source={icon.iconQuestion} />
           </View>
         </View>
         <View style={styles.welcomeBox}>
           <Text style={styles.welcomeText}>Welcome to</Text>
-          <Text style={styles.welcomeText}>ND Gaming</Text>
+          <Text style={styles.welcomeText}>ND Chat</Text>
+          <Text style={styles.welcomeText}>
+            Please select your account type !!!
+          </Text>
         </View>
-        <View style={{backgroundColor: 'green', flex: 4}} />
+        <View style={{backgroundColor: 'green', flex: 4}}>
+          <TouchableOpacity style={styles.btnInflu}>
+            <Text style={styles.textBtn}>Influencer</Text>
+          </TouchableOpacity>
+        </View>
+
         <View style={{backgroundColor: 'yellow', flex: 2}} />
       </ImageBackground>
     </View>

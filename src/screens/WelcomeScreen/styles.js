@@ -29,12 +29,25 @@ const styles = StyleSheet.create({
   },
   welcomeBox: {
     flex: 2,
-    backgroundColor: 'blue',
   },
   welcomeText: {
-    color: 'white',
+    color: 'red',
     textAlign: 'center',
     marginTop: 20,
+    fontSize: 20,
+  },
+  btnInflu: {
+    borderColor: 'white',
+    borderWidth: 1,
+    height: 40,
+    borderRadius: 5,
+    marginHorizontal: 20,
+    marginVertical: 10,
+    alignItems: 'center',
+  },
+  textBtn: {
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });
 export default styles;
