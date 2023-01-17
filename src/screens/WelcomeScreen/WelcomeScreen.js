@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 import {images, icon} from '../../constants';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function WelcomScreen(props) {
   return (
@@ -34,6 +35,13 @@ function WelcomScreen(props) {
         <View style={{backgroundColor: 'green', flex: 4}}>
           <TouchableOpacity style={styles.btnInflu}>
             <Text style={styles.textBtn}>Influencer</Text>
+            <Ionicons
+              testID="nextButton"
+              name="arrow-forward"
+              color="rgba(255, 255, 255, .9)"
+              size={24}
+              style={{backgroundColor: 'transparent'}}
+            />
           </TouchableOpacity>
         </View>
 
